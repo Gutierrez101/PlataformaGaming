@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@PlataformaGaming</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 font-sans">
+    <!--NavBar-->
+    <header class="bg-blue-600 text-white p-4 flex items-center justify-between">
+        <div class="flex items-center space -x-2">
+            <img src="Espe.jpeg" alt="Logo" class="h-8 w-8">
+            <h1 class="text-2x1 font-bold">@PlataformaGaming</h1>
+        </div>
+        <select class="bg-white text-black rounded px-2">
+            <option>Español</option>
+            <option>Ingles</option>
+        </select>
+    </header>
+    
+    <!--Contenedor principal-->
+    <div class="flex h-screen">
+        <!--Sidebar-->
+        <nav id="sidebar" class="w-64 bg-blue-800 text-white p-4 hidden md:block">
+            <!--Usuario-->
+            <div class="mb-6">
+                <img src="jugador.png" class="h-16 w-16 rounded-full mx-auto" alt="usuario">
+                <p class="text-center mt-2">demo (Profesor)</p>
+            </div>
+            <!--Menu-->
+            <ul class="space-y-2">
+                <li class="hover:bg-blue-700 rounded p-2 cursor-pointed">Mis Cursos</a></li>
+                <li class="hover:bg-blue-700 rounded p-2 cursor-pointed">Clases Compartidas</a></li>
+                <li class="hover:bg-blue-700 rounded p-2 cursor-pointed">FAQ</a></li>
+            </ul>
+        </nav>
+
+        <main class="flex-1 overflow-auto p-6">
+            <h2 class="text-x1 font-semibold mb-4">Mis Clases</h2>
+            <div id="class-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!--Agregar tarjetas de clase-->
+            </div>
+        </main>
+    </div>
+    <script src="../js/controllers/"></script>
+</body>
+</html>
