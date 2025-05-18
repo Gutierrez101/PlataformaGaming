@@ -1,3 +1,5 @@
+
+// esta funcion se encarga de renderizar una tarjeta de clase
 export function renderClassCard(clase){
     const tarjeta=document.createElement('div');
     tarjeta.className='bg.white rounded-lg shadow hover:shadow-lg p-4';
