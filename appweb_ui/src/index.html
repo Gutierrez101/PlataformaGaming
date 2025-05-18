@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@PlataformaGaming</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 <body class="bg-gray-100 font-sans">
     <!--NavBar-->
@@ -39,20 +39,10 @@
         <main class="flex-1 overflow-auto p-6">
             <h2 class="text-x1 font-semibold mb-4">Mis Clases</h2>
             <div id="class-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="bg-white shadow-md rounded-lg p-4">
-                    <h3 class="text-lg font-semibold">Clase 1</h3>
-                    <p class="text-gray-600">Descripción de la clase 1.</p>
-                    <button class="mt-2 bg-blue-600 text-white px-4 py-2 rounded">Unirse</button>
-                </div>
-                <div class="bg-white shadow-md rounded-lg p-4">
-                    <h3 class="text-lg font-semibold">Clase 2</h3>
-                    <p class="text-gray-600">Descripción de la clase 2.</p>
-                    <button class="mt-2 bg-blue-600 text-white px-4 py-2 rounded">Unirse</button>
-                </div>
-                <!-- Agregar más clases aquí -->
+                <!-- Agregar las clases aquí -->
             </div>
         </main>
     </div>
-    <script src="../js/controllers/"></script>
+    <script type="module" src="js/controllers/classController.js"></script>
 </body>
 </html>

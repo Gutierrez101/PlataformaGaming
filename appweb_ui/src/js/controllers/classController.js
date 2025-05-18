@@ -5,5 +5,5 @@ import { renderClassCard } from '../views/renderClasses.js'; // importar la func
 (async function init(){
     const clases=await getAllClasses();
     const grid=document.getElementById('class-grid');
-    clases.forEach(c => grid.appendChlild(renderClassCard(c)));         
+    clases.forEach(c => grid.appendChild(renderClassCard(c)));         
 })();
