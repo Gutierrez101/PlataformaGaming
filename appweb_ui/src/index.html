@@ -1,48 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@PlataformaGaming</title>
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Security-Policy"
+      content="default-src 'self';
+               script-src 'self' https://cdn.jsdelivr.net;
+               style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net;">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plataforma IA Académica</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
-<body class="bg-gray-100 font-sans">
-    <!--NavBar-->
-    <header class="bg-green-600 text-white p-4 flex items-center justify-between">
-        <div class="flex items-center space -x-2">
-            <img src="Espe.jpeg" alt="Logo" class="h-8 w-8">
-            <h1 class="text-2x1 font-bold">@PlataformaGaming</h1>
-        </div>
-        <select class="bg-white text-black rounded px-2">
-            <option>Español</option>
-            <option>Ingles</option>
-        </select>
-    </header>
-    
-    <!--Contenedor principal-->
-    <div class="flex h-screen">
-        <!--Sidebar-->
-        <nav id="sidebar" class="w-64 bg-green-400 text-white p-4 hidden md:block">
-            <!--Usuario-->
-            <div class="mb-6">
-                <img src="jugador.png" class="h-16 w-16 rounded-full mx-auto" alt="usuario">
-                <p class="text-center mt-2">demo (Profesor)</p>
-            </div>
-            <!--Menu-->
-            <ul class="space-y-2">
-                <li class="hover:bg-blue-700 rounded p-2 cursor-pointed">Mis Cursos</a></li>
-                <li class="hover:bg-blue-700 rounded p-2 cursor-pointed">Clases Compartidas</a></li>
-                <li class="hover:bg-blue-700 rounded p-2 cursor-pointed">FAQ</a></li>
-            </ul>
-        </nav>
+<body class="bg-gray-100">
+  <header class="p-4 bg-white shadow flex justify-between items-center">
+    <h1 class="text-2xl font-bold">IA Académica</h1>
+    <nav>
+      <button id="login-teacher" class="text-blue-600 mr-4">Profesor</button>
+      <button id="login-student" class="text-blue-600">Estudiante</button>
+    </nav>
+  </header>
+  <main id="app" class="p-6"></main>
 
-        <main class="flex-1 overflow-auto p-6">
-            <h2 class="text-x1 font-semibold mb-4">Mis Clases</h2>
-            <div id="class-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- Agregar las clases aquí -->
-            </div>
-        </main>
-    </div>
-    <script type="module" src="js/controllers/classController.js"></script>
+  <!-- Cargar módulo de inicialización que importa controladores y dependencias -->
+  <script type="module" src="js/init.js"></script>
 </body>
 </html>
