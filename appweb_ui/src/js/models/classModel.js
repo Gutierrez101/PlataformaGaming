@@ -1,9 +1,47 @@
-// Modelo que contiene los datos simulados de clases
+// classModel.js
+// Datos de ejemplo con imagen + retos
+
+const classes = [
+  {
+    id: 1,
+    name: "Marcos de Trabajo",
+    image: "images/math.png",
+    retos: [
+      { id: 1, title: "React" },
+      { id: 2, title: "Next.js" },
+    ],
+    students: ["student1", "student2"]
+  },
+  {
+    id: 2,
+    name: "Desarrollo web",
+    image: "images/fisica.png",
+    retos: [
+      { id: 1, title: "HTML5" },
+      { id: 2, title: "CSS" }
+    ],
+    students: ["student1"]
+  },
+  {
+    id: 3,
+    name: "Almacenamiento en la nube",
+    image: "images/programacion.png",
+    retos: [
+      { id: 1, title: "AWS" },
+      { id: 2, title: "Heroku" }
+    ],
+    students: ["student2"]
+  }
+];
 
 export function getClasses() {
-    return [
-        { id: 1, name: "Matemáticas", teacher: "Prof. García" },
-        { id: 2, name: "Física", teacher: "Ing. Torres" },
-        { id: 3, name: "Programación", teacher: "Lic. Pérez" },
-    ];
+  return classes;
+}
+
+export function getClassById(id) {
+  return classes.find(c => c.id === Number(id)) || null;
+}
+
+export function getClassesByTeacher(teacher) {
+  return classes.filter(c => c.teacher === teacher);
 }

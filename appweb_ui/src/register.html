@@ -1,0 +1,24 @@
+<!DOCTYPE html><html lang="es">
+<head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Registro</title><script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="flex items-center justify-center h-screen bg-gray-100">
+  <form id="register-form" class="bg-white p-6 rounded shadow-md w-80">
+    <h1 class="text-2xl mb-4">Crear Usuario</h1>
+    <input name="username" placeholder="Usuario" class="w-full mb-2 p-2 border rounded" required/>
+    <input type="password" name="password" placeholder="Contraseña" class="w-full mb-2 p-2 border rounded" required/>
+    <select name="role" class="w-full mb-2 p-2 border rounded">
+      <option value="student">Estudiante</option>
+      <option value="teacher">Profesor</option>
+    </select>
+    <p id="register-error" class="text-red-500 text-sm h-5"></p>
+    <button class="w-full bg-green-600 text-white py-2 rounded">Registrar</button>
+    <p class="mt-4 text-sm">
+      ¿Ya tienes cuenta? <a href="login.html" class="text-blue-600">Ingresa</a>
+    </p>
+  </form>
+  <script type="module">
+    import { initAuthPages } from './js/controllers/userController.js';
+    initAuthPages();
+  </script>
+</body></html>

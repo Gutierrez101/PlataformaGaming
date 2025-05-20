@@ -1,0 +1,15 @@
+<!DOCTYPE html><html lang="es">
+<head>
+    <meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>Dashboard Profesor</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 p-6 font-sans">
+  <h1 class="text-3xl font-bold mb-6">Panel de Profesor</h1>
+  <div id="teacher-container"></div>
+
+  <script type="module">
+    import { initTeacherDashboard } from './js/controllers/teacherController.js';
+    initTeacherDashboard();
+  </script>
+</body></html>
