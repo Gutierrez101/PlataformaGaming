@@ -1,25 +1,42 @@
+<!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="Content-Security-Policy"
-      content="default-src 'self';
-               script-src 'self' https://cdn.jsdelivr.net;
-               style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net;">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Plataforma IA Académica</title>
-  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Clases Académicas</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-100">
-  <header class="p-4 bg-white shadow flex justify-between items-center">
-    <h1 class="text-2xl font-bold">IA Académica</h1>
-    <nav>
-      <button id="login-teacher" class="text-blue-600 mr-4">Profesor</button>
-      <button id="login-student" class="text-blue-600">Estudiante</button>
-    </nav>
-  </header>
-  <main id="app" class="p-6"></main>
+<body class="bg-gray-100 min-h-screen font-sans">
 
-  <!-- Cargar módulo de inicialización que importa controladores y dependencias -->
-  <script type="module" src="js/init.js"></script>
+  <!-- Header con logo e imagen de jugador -->
+  <header class="bg-blue-600 text-white p-4 shadow-md flex items-center justify-between">
+    <div class="flex items-center space-x-4">
+      <!-- Logo de la institución -->
+      <img src="Espe.jpeg" alt="Logo ESPE" class="h-12 w-12 rounded-full border-2 border-white" />
+      <h1 class="text-2xl font-bold">Lista de Clases</h1>
+    </div>
+    
+    <!-- Imagen de jugador o avatar -->
+    <img src="jugador.png" alt="Jugador" class="h-12 w-12 rounded-full border-2 border-white" />
+  </header>
+
+  <!-- Contenido principal -->
+  <main class="p-6">
+    <div id="class-container" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Las clases se renderizan aquí -->
+    </div>
+  </main>
+
+  <footer class="text-center text-gray-500 text-sm mt-10">
+    <p>&copy; 2025 Proyecto Educativo</p>
+  </footer>
+
+  <!-- Controlador principal -->
+  <script type="module">
+  import { initClassDisplay } from './js/controllers/classController.js';
+  window.addEventListener("DOMContentLoaded", initClassDisplay);
+</script>
+
 </body>
 </html>

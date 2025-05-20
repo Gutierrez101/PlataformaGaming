@@ -1,11 +1,16 @@
+// Vista que se encarga de renderizar las clases en el DOM
 
-// esta funcion se encarga de renderizar una tarjeta de clase
-export function renderClassCard(clase){
-    const tarjeta=document.createElement('div');
-    tarjeta.className='bg.white rounded-lg shadow hover:shadow-lg p-4';
-    tarjeta.innerHTML=`
-        <img src="${clase.imagen}" alt="${clase.nombre}" class="w-full h-32 object-cover rounded-t-lg">
-        <h3 class="mt-2 text-lg font-bold text-center">${clase.nombre}</h3>
-    `;
-    return tarjeta;
+export function renderClasses(classes) {
+    const container = document.getElementById("class-container");
+    container.innerHTML = ""; // Limpia el contenedor antes de renderizar
+
+    classes.forEach(clase => {
+        const div = document.createElement("div");
+        div.className = "bg-white shadow-md rounded p-4 mb-4";
+        div.innerHTML = `
+            <h3 class="text-xl font-bold">${clase.name}</h3>
+            <p class="text-gray-600">Docente: ${clase.teacher}</p>
+        `;
+        container.appendChild(div);
+    });
 }

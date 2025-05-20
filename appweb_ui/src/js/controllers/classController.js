@@ -1,9 +1,9 @@
-import {getAllClasses} from '../models/classModel.js';// importar la funcion getAllClasses
-import { renderClassCard } from '../views/renderClasses.js'; // importar la funcion renderClassCard
+// Controlador encargado de manejar la lógica entre el modelo y la vista
 
-// Esta funcion se encarga de inicializar la aplicacion
-(async function init(){
-    const clases=await getAllClasses();
-    const grid=document.getElementById('class-grid');
-    clases.forEach(c => grid.appendChild(renderClassCard(c)));         
-})();
+import { getClasses } from "../models/classModel.js";
+import { renderClasses } from "../views/renderClasses.js";
+
+export function initClassDisplay() {
+    const classes = getClasses(); // Obtiene los datos desde el modelo
+    renderClasses(classes);       // Envía los datos a la vista para renderizarlos
+}
