@@ -5,7 +5,7 @@ const classes = [
   {
     id: 1,
     name: "Marcos de Trabajo",
-    image: "images/math.png",
+    image: "images/marco-de-referencia.png",
     retos: [
       { id: 1, title: "React" },
       { id: 2, title: "Next.js" },
@@ -15,7 +15,7 @@ const classes = [
   {
     id: 2,
     name: "Desarrollo web",
-    image: "images/fisica.png",
+    image: "images/software.png",
     retos: [
       { id: 1, title: "HTML5" },
       { id: 2, title: "CSS" }
@@ -25,7 +25,7 @@ const classes = [
   {
     id: 3,
     name: "Almacenamiento en la nube",
-    image: "images/programacion.png",
+    image: "images/archivo.png",
     retos: [
       { id: 1, title: "AWS" },
       { id: 2, title: "Heroku" }
